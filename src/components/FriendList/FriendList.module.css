@@ -1,0 +1,11 @@
+.friends {
+    width: 250px;
+    text-align: center;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
