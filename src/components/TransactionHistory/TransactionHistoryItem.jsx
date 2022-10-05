@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+import s from './TransactionHistory.module.css';
+
 export const TransactionHistoryItem = ({ id, type, amount, currency }) => {
   return (
     <>
-      <tr key={id}>
+      <tr className={ s.deskRow}>
         <td>{type}</td>
         <td>{amount}</td>
         <td>{currency}</td>
@@ -13,7 +15,7 @@ export const TransactionHistoryItem = ({ id, type, amount, currency }) => {
 
 TransactionHistoryItem.propTypes = {
   id: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };
