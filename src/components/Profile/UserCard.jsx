@@ -37,7 +37,7 @@ export const UserCard = ({ firstUser }) => {
 };
 
 UserCard.propTypes = {
-  user: PropTypes.shape({
+  firstUser: PropTypes.shape({
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
