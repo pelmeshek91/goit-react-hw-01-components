@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const FriendsItem = ({ avatar, name, isOnline }) => {
   return (
     <li className="item">
@@ -6,4 +8,9 @@ export const FriendsItem = ({ avatar, name, isOnline }) => {
       <p className="name">{name}</p>
     </li>
   );
+};
+FriendsItem.prototype = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
