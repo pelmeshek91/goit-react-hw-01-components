@@ -13,15 +13,8 @@ export const TransactionHistory = ({ items }) => {
       </thead>
 
       <tbody>
-        {items.map(({ id, type, amount, currency }) => {
-          return (
-            <TransactionItem
-              key={id}
-              type={type}
-              amount={amount}
-              currency={currency}
-            />
-          );
+        {items.map(item => {
+          return <TransactionItem key={item.id} {...item} />;
         })}
       </tbody>
     </table>
@@ -31,9 +24,6 @@ TransactionHistory.prototype = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired,
-      currency: PropTypes.string.isRequired,
     })
   ),
 };
