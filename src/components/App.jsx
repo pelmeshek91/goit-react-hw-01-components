@@ -11,7 +11,7 @@ import transactions from './Transactions/transactions.json';
 export const App = () => {
   return (
     <>
-      <Profile user={user} />
+      <Profile {...user} />
       <Statistics title="Upload stats" stats={data} />
       <FriendsList list={friends} />
       <TransactionHistory items={transactions} />;
